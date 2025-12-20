@@ -1,0 +1,20 @@
+demo - For IoC Example
+
+==========	Spring Core	==========
+
+	Inversion of Control
+
+- High Level controls Low Level 
+****** Problems
+- Tightly coupling
+- Reduce reusability
+
+***** Solutions
+- DI 
+- Constructor
+- Setter
+
+
+
+
+	
