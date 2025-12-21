@@ -14,7 +14,25 @@ demo - For IoC Example
 - Constructor
 - Setter
 
+=========================================================================================
 
-
-
+==========	Maven Dependency Scopes	==========
+-	Compile		->	can see in workspace, compile to jar file
+- 	Provided	->	can see in workspace, not compile to jar file
+-	Runtime		->	cannot see in workspace,compile to jar file
+-	Test		->	only test
 	
+	
+=========================================================================================
+
+==========	Bean Configuration Types	==========
+
+-	XML Based
+-	Annotation Based
+-	Java Based
+-	Auto Configuration 
+
+=========================================================================================
+
+
+
