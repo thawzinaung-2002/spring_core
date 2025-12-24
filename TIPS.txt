@@ -65,3 +65,51 @@ demo - For IoC Example
 -	auto-configure values in spring container in Annotation but not in XML
 
 =========================================================================================
+
+==========	Annotation	- Two Types ==========
+
+-	use to write Application	:	annotation
+-	use to write Annotation		:	meta-annotation
+
+=========================================================================================
+
+==========	Stereo type annotation (@Component) ==========
+
+-	meta + annotation
+
+=========================================================================================
+
+==========	Bean Name ==========
+
+-	XML			:	package.class#serial(default), id(priority) , name(name1,name2,name3) => name2 and name3 are alias name
+-	Annotation	:	Class Name's first letter to small character
+-	Java Based	:	Method's Name
+
+=========================================================================================
+
+==========	Bean Scope ==========
+
+-	Singleton		:	only one object in IoC container - create when IoC initialize, to prevent use @Lazy  
+-	Prototype		:	create new object when new request
+-	Request
+-	Session
+-	Application
+-	WebSocket
+
+=========================================================================================
+
+==========	Bean Lifecycle ==========
+
+	Annotation
+-	@PostConstruct (jarkata-api)
+-	@PreDestroy
+
+	Interface
+-	InitializingBean
+-	DisposableBean
+
+	Custom
+-	initMethod of @Bean
+-	destroy of @Bean
+
+=========================================================================================
