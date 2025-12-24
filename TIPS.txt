@@ -35,4 +35,33 @@ demo - For IoC Example
 =========================================================================================
 
 
+==========	Bean Processors	==========
 
+- Bean Factory Post Processor	:	to change or modify bean definition
+- Bean Post Processor			:	customize bean before or after bean creation
+
+
+=========================================================================================
+
+==========	Event Publisher - Subscriber	==========
+
+- Aware	(ApplicationEventPublisher)	:	to notify of the ApplicationEventPublisher, use to publish event
+- EventListener						:	catch the event 
+
+
+=========================================================================================
+
+==========	Beans Creation	==========
+
+-	Constructor			:	return object of own class
+-	Static Factory		:	return object from static method , factory class + factory method
+-	Instance Factory	:	return object from instance method , factory bean + factory method
+
+
+=========================================================================================
+
+==========	Tips for SpringJunitConfig	==========
+
+-	auto-configure values in spring container in Annotation but not in XML
+
+=========================================================================================
