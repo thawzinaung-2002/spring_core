@@ -1,0 +1,8 @@
+
+	Junit Test
+
+	- BeforeAll - must be static, call before of all test annotation methods
+	- AfterAll	- must be static, call after of all test annotation methods
+	- BeforeEach - call before once per test annotation method call
+	- AfterEach - call after once per test annotation method call
+	- Test - test method
