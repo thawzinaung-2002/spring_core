@@ -1,0 +1,40 @@
+
+===================	Dependency Injection	=================================
+
+		Explicit Wiring
+-	Constructor
+-	Setter 
+
+Tips
+-	Setter Injection			:	need default constructor
+-	Setter Property Name(XML)	:	setter method's name capitalize, eg - setMyName() -> myName
+
+
+=============================================================================
+
+
+===================	Autowiring	=============================================
+
+		Common Problems
+-	Not found bean
+-	Found more than one bean
+-	Cyclic dependency
+
+
+		XML Config
+-	byName, byType mode needs setter method
+
+
+=============================================================================
+
+
+===================	Common Errors	=========================================
+
+
+-	Primary
+-	Order (Listing Bean Order)
+-	Bean Name
+-	Qualifier
+-	Priority(jarkata annotation)
+
+=============================================================================
