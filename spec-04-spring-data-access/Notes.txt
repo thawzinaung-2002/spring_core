@@ -1,8 +1,26 @@
 
 	Junit Test
-
 	- BeforeAll - must be static, call before of all test annotation methods
 	- AfterAll	- must be static, call after of all test annotation methods
 	- BeforeEach - call before once per test annotation method call
 	- AfterEach - call after once per test annotation method call
 	- Test - test method
+	
+	JdbcTemplate (use ? for parameter)
+	- select * from product p where p.id = ?; [with Array]
+	
+	NamedParameterJdbcTemplate (use name for parameter)
+	- select * from product p where p.id = :id;[with Map]
+	
+	Profile
+	@Profile("p1")			-	for bean name with profile
+	@ActiveProfiles("p1")	-	for test
+
+
+	JdbcClient (6.1)
+	- From Spring 6.1, High-level API
+	
+	@ConfigurationProperties (spring-boot-configuration-processor)
+	- For Custom Properties in application.properties file
+	
+	

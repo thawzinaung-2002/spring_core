@@ -3,21 +3,23 @@ package com.spring.jdbc;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.spring.jdbc.repo.DivisionRepo;
 
 @SpringBootTest
+//@ActiveProfiles("jdbc")
+//@ActiveProfiles("named")
+@ActiveProfiles("client")
 public class DivisionRepoTest {
 
 	@Autowired
 	private DivisionRepo repo;
 	
-	@Test
 	@ParameterizedTest
 	@CsvSource({
 		",15",
@@ -32,7 +34,6 @@ public class DivisionRepoTest {
 		assertEquals(result.size(), size);
 	}
 	
-	@Test
 	@ParameterizedTest
 	@CsvSource({
 		"1,Ayeyarwady Region,8",
