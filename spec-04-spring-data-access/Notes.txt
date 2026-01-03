@@ -40,3 +40,7 @@
 	
 	
 	@ArgumentsSource		-	implements ArgumentsProvider 
+	
+	
+	SimpleJdbcInsert
+	- doesn't need preparestatement creation
