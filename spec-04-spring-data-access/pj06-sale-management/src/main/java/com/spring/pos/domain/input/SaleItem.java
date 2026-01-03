@@ -7,8 +7,9 @@ import lombok.Data;
 @Data
 public class SaleItem {
 
+	private int saleId;
 	private String productCode;
-	private int qty;
+	private int quantity;
 	private BigDecimal unitPrice;
 	
 }

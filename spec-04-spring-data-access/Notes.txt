@@ -24,3 +24,19 @@
 	- For Custom Properties in application.properties file
 	
 	
+	@ValueSource			-	Single Java Data Type
+	@NullSource				-	For Null value
+	@EmptySouce				-	For collections empty 
+	@NullAndEmptySource		-	For both null and empty
+	
+	@EnumSource				-	For Enum Type
+	
+	@CsvSource				-	Multiple Parameters	
+	@CsvFileSource			-	Multiple Parameters (from file)
+	
+	@MethodSource			
+		-	Methods in same class (method name optional)
+		-	Methods in different class (fully qualified name - package.class#method)
+	
+	
+	@ArgumentsSource		-	implements ArgumentsProvider 

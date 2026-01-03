@@ -11,6 +11,7 @@ import com.spring.pos.domain.exceptions.PosBusinessException;
 import com.spring.pos.domain.input.ShoppingCart;
 import com.spring.pos.domain.output.SaleDetails;
 import com.spring.pos.domain.output.SaleInfo;
+import com.spring.pos.repository.ProductRepo;
 import com.spring.pos.repository.SaleHistoryRepo;
 import com.spring.pos.repository.SaleProductRepo;
 import com.spring.pos.service.SaleService;
@@ -23,6 +24,9 @@ public class SaleServiceImpl implements SaleService{
 	
 	@Autowired
 	private SaleProductRepo saleProductRepo;
+	
+	@Autowired
+	private ProductRepo productRepo;
 	
 	@Override
 	public int checkOut(ShoppingCart cart) {
@@ -53,19 +57,20 @@ public class SaleServiceImpl implements SaleService{
 		}
 		
 		for(var item: cart.getItems()) {
-			if(null == item) {
-				throw new PosBusinessException("Please enter items.");
-			}
 			
 			if(!StringUtils.hasLength(item.getProductCode())) {
 				throw new PosBusinessException("Please enter product code.");
+			}
+			
+			if(productRepo.findByCode(item.getProductCode()).isEmpty()) {
+				throw new PosBusinessException("Invalid product code.");
 			}
 			
 			if(item.getUnitPrice().intValue() <= 0) {
 				throw new PosBusinessException("Invalid unit price.");
 			}
 			
-			if(item.getQty() <= 0) {
+			if(item.getQuantity() <= 0) {
 				throw new PosBusinessException("Invalid quantity.");
 			}
 		}
@@ -78,7 +83,8 @@ public class SaleServiceImpl implements SaleService{
 
 	@Override
 	public SaleDetails findById(int id) {
-		var saleInfo = saleHistoryRepo.findById(id);
+		var saleInfo = saleHistoryRepo.findById(id)
+				.orElseThrow(() -> new PosBusinessException("Invalid sale id."));
 		
 		var items = saleProductRepo.findBySaleId(id);
 		

@@ -16,7 +16,7 @@ public class SaleDetails {
 
 	public int getItemCount() {
 		if (null != items && !items.isEmpty()) {
-			return items.stream().mapToInt(i -> i.getQty()).sum();
+			return items.stream().mapToInt(i -> i.getQuantity()).sum();
 		}
 		return 0;
 	}

@@ -11,9 +11,9 @@ public class SaleDetailsItem {
 	private String productCode;
 	private String productName;
 	private BigDecimal unitPrice;
-	private int qty;
+	private int quantity;
 	
 	public BigDecimal getTotal() {
-		return unitPrice.multiply(BigDecimal.valueOf(qty));
+		return unitPrice.multiply(BigDecimal.valueOf(quantity));
 	}
 } 
