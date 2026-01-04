@@ -26,8 +26,9 @@ public class ProductRepoSimpleJdbcInsert implements ProductRepo{
 		rowMapper = new DataClassRowMapper<>(ProductDetails.class);
 		template = new JdbcTemplate(dataSource);
 		insert = new SimpleJdbcInsert(dataSource)
-				.usingGeneratedKeyColumns("id")
-				.usingColumns("name", "category", "image", "price");
+				.withTableName("product")
+				.usingGeneratedKeyColumns("id");
+//				.usingColumns("name", "category", "image", "price");
 	}
 
 	@Override

@@ -1,0 +1,46 @@
+				
+				AOP - Aspect Oriented Programming
+	
+	-	XML
+	-	AspectJ
+	
+	
+	Aspect				:	Class of the collection of advices
+	Advice				:	Codes and Methods to put in Business Logic
+	Pointcut			:	Expression where to use advices
+	JoinPoint			:	In Business method
+	
+	
+	Interface based		:	JdkDynamic Proxy
+	Class based			:	CGLib Proxy
+	
+	
+	Before				:	Before Method Execution of point cut
+	Around				:	Within Method Execution of point cut
+	After Returning		:	After Method Returning of point cut
+	After Throwing		:	After Method Throwing of point cut
+	After				:	After Method Execution of point cut
+	
+	
+	Pointcut Designators
+	-	Scoped	(within, bean)
+	-	Kinded	(execution, args)
+	-	Contextual	(target, this)
+	
+	Scoped
+	-	within(target-type-pattern)
+		-	Full Qualified Class Name
+		-	* (wildcard)
+	-	bean (bean name)
+		
+	Contextual
+	-	this	(proxy bean)
+	-	target	(target bean)
+	
+	Kinded
+	- method name
+	- * any one type
+	- .. any argument
+	- input type can reference
+	
+	14:14

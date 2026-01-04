@@ -44,3 +44,7 @@
 	
 	SimpleJdbcInsert
 	- doesn't need preparestatement creation
+	
+	
+	ArgumentsAggregator Interface (@AggregateWith)
+	-	Data from CsvFile change to respective bean before test method parameter to use in the method
