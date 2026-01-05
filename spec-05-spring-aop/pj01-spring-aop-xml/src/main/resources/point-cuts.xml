@@ -14,20 +14,26 @@
 		<!-- Scope Designators -->
 		<aop:pointcut expression="within(com.spring.*)" id="within"/>
 		<aop:pointcut expression="bean(adviceArgumentsDemo)" id="bean"/>
-		
+		<aop:pointcut expression="@within(com.spring.aop.annotations.SecuredService)" id="annotatedClass"/>
 		
 		<!-- Kinded Designators -->
 		<aop:pointcut expression="execution(* *(..))" id="execute"/>
 		<aop:pointcut expression="args(*)" id="args"/>
+		<aop:pointcut expression="@annotation(com.spring.aop.annotations.SecuredMethod)" id="annotatedMethod"/>
+		<aop:pointcut expression="@args(com.spring.aop.annotations.SecuredArgs)" id="annotatedArgs"/>
 		
 		<!-- Contextual Designators -->
 		<aop:pointcut expression="this(com.spring.aop.MessageService)" id="this"/>
 		<aop:pointcut expression="target(com.spring.aop.MessageBean)" id="target"/>
+		<aop:pointcut expression="@target(com.spring.aop.annotations.SecuredService)" id="annotatedTarget"/>
 		
 		
 		<aop:aspect ref="pointCutAdvice">
-			<!-- <aop:before method="before" pointcut-ref="args"/> -->
-			<aop:before method="beforeWithArgs" pointcut="execution(* *(..)) and args(input, ..)" arg-names="input"/>
+			<aop:before method="before" pointcut-ref="annotatedArgs"/>
+		<!-- 
+		<aop:before method="beforeWithArgs" pointcut="execution(* *(..)) and args(input, ..)" arg-names="input"/>
+		 -->
+			
 		</aop:aspect>
 		
 	</aop:config>

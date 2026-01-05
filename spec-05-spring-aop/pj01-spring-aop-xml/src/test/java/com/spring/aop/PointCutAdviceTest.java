@@ -22,6 +22,8 @@ public class PointCutAdviceTest {
 	void test() {
 		messageService.send("Send Message");
 		
+		messageService.hello("Hello Method");
+		
 		argumentsDemo.getLength("Hello Arguments");
 		
 		otherMessageSender.send(3, "Others Message");

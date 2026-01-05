@@ -3,6 +3,9 @@ package com.spring.other;
 
 import org.springframework.stereotype.Service;
 
+import com.spring.aop.annotations.SecuredService;
+
+@SecuredService
 @Service
 public class OtherMessageSender {
     
