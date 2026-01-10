@@ -43,4 +43,21 @@
 	- .. any argument
 	- input type can reference
 	
-	14:14
+	
+	Annotations
+	@annotation		-	Annotated Methods
+	@args			-	Method Arguments Type
+	@within			-	Annotated Class (not inheritance)
+	@target			-	Annotated Object (inheritance)
+	
+	
+	AspectJ
+	@Aspect						-	aspect class
+	@EnableAspectJAutoProxy		-	in application config
+	@Pointcut					-	pointcut using designators
+	
+	
+	Advisors
+	- MethodBeforeAdvice Interface
+	- MethodInterceptor Interface
+	
