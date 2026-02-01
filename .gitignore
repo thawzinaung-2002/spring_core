@@ -26,3 +26,10 @@ replay_pid*
 
 .metadata
 
+Servers/**
+.project
+**/bin/**
+**/target/**
+
+
+

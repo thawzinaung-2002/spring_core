@@ -30,5 +30,7 @@
   	<module>spring-transaction-commons</module>
   	<module>pj02-spring-txn-java</module>
   	<module>pj03-spring-txn-boots</module>
+  	
+  	<module>pj04-programatic-transaction-boots</module>
   </modules>
 </project>
