@@ -1,0 +1,31 @@
+
+Spring ORM
+
+Serializable 	=>	For Second Level cache, good practice
+
+Multi-value primary keys
+Embedded Class	=>	need to override hashCode and Equal for Same Object as same value 
+IdClass
+
+
+Collection Mapping
+ElementCollection	=>	For Collection Data Type, Map is essential, List, Set is not mandatory
+CollectionTable		=>	For Table Data info customizing
+MapKeyColumn		=>	For key column name in Map data type
+
+
+Secondary Tables
+Many Sub-Tables in One Entity
+
+
+Inherientance Mapping
+- @Inherientance(Same Parent - Is a RS)	=>	Used to common attributes as a class , will create itself or not depends on strategy
+- @MappedSuperClass(Share to Child - Use as a RS)	=>	Used to create a class which include common attributes, as columns in another table
+
+
+
+Has A Relationship
+Many to One 
+One  to One
+One  to One
+Many to Many

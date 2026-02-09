@@ -31,5 +31,8 @@
 		<module>pj02-jpa-without-spring</module>
 		<module>pj03-orm-with-xml</module>
 		<module>pj04-orm-with-java</module>
+		<module>pj05-simple-mapping</module>
+		<module>pj06-schema-generation</module>
+		<module>pj07-relationship-mappings</module>
 	</modules>
 </project>
