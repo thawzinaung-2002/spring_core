@@ -29,3 +29,21 @@ Many to One
 One  to One
 One  to One
 Many to Many
+
+Ends with Many output JoinTable default.
+
+ManyToMany is always join table but OneToMany can customize.
+
+OneToOne and ManyToOne create foreign key in owner table 
+but OneToMany is inverse. 
+
+On the other hand, foreign keys are 
+created in Many side.
+
+
+AttributeConverter
+- Change Entity Data Type and Database Column Value viceversa
+
+
+AttributeOverride
+- When same column names from embeddable , customize name 

@@ -1,5 +1,7 @@
 package com.spring.orm.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -31,5 +34,8 @@ public abstract class Product extends SecurityInfo {
 
 	@Column(nullable = false)
 	private int unitPrice;
+
+	@ManyToMany(mappedBy = "products")
+	private List<Merchant> suppliers;
 
 }
