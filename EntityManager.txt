@@ -1,0 +1,34 @@
+Entity Manager
+
+Entities were controlled by Entity Manager. 
+Those entities were kept in persistence context as cache.
+Persistence Context based on Set theory. 
+So, entities are unique.
+
+
+Entity States
+- Transient
+- Managed
+- Detach
+- Remove
+
+
+Cascade Type , OrphanRemoval
+
+- Cascade is from owner entity action affect to reference entity
+- OrphanRemoval is from reference entity
+- When parent action child action => cascade 
+- When no reference on parent child delete => orphanremoval
+
+
+Callback And EntityListeners
+Callback Annotations - 
+- PrePersist
+- PostPersist
+- PreLoad
+- PreUpdate
+- PostUpdate
+- PreRemove
+- PostRemove
+
+EntityListeners use with callback functions depend on entity event.
