@@ -1,0 +1,5 @@
+insert into course (name, hours, fees) values ('Java Basic',180,150000)
+insert into course (name, hours, fees) values ('Java Web',240,200000)
+insert into course (name, hours, fees) values ('Spring Framework',300,400000)
+insert into course (name, hours, fees) values ('React',240,200000)
+insert into course (name, hours, fees) values ('Futter',240,200000)
