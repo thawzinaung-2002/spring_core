@@ -8,12 +8,11 @@ import lombok.Data;
 
 @Data
 @Embeddable
-public class SessionPk {
+public class SectionPk {
 
 	@Column(name = "course_id")
 	private int courseId;
 
 	@Column(name = "start_at")
 	private LocalDate startAt;
-
 }

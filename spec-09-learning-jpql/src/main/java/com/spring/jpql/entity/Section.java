@@ -13,7 +13,7 @@ import lombok.Data;
 public class Section {
 
 	@EmbeddedId
-	private SessionPk pk;
+	private SectionPk pk;
 
 	private Course course;
 

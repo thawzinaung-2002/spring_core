@@ -9,14 +9,30 @@ import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.NamedQuery;
 import lombok.Data;
 
 @Data
 @Entity
+@NamedQuery(name = "Section.searchUnderFees", query = """
+		select new com.spring.query.entity.dto.SectionDto(c.pk, c.course.hours, c.endAt, c.startTime, c.endTime,
+		c.course.name, c.fees, c.days)
+		from Section c where c.fees <=: fees
+		""")
+@NamedQuery(name = "Section.searchStartBetween", query = """
+		select new com.spring.query.entity.dto.SectionDto(c.pk, c.course.hours, c.endAt, c.startTime, c.endTime,
+		c.course.name, c.fees, c.days)
+		from Section c where c.pk.startAt between :from and :to
+		""")
+@NamedQuery(name = "Section.searchStartTimeIn", query = """
+		select new com.spring.query.entity.dto.SectionDto(c.pk, c.course.hours, c.endAt, c.startTime, c.endTime,
+		c.course.name, c.fees, c.days)
+		from Section c where c.startTime in :times
+		""")
 public class Section {
 
 	@EmbeddedId
-	private SessionPk pk;
+	private SectionPk pk;
 
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "course_id", referencedColumnName = "id", insertable = false, updatable = false)
